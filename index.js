@@ -33,12 +33,9 @@ module.exports = function itemfinder(d) {
 
   }
 
-  d.command.add('itemsearch', (arg) => {
-    if (arg == 'debug') {
-      d.command.message(updateThrottle)
-    }
+  d.command.add(['isearch', 'ifind', 'searchitem', 'finditem'], (arg) => {
     if (!arg) { d.settings.scanning = !d.settings.scanning; d.command.message(`Item Scanning ${d.settings.scanning ? 'En' : 'dis'}abled`) }
-    if (arg && arg !== 'debug') {
+    if (arg) {
       d.command.message(`Attempting to find an item with <font color="#77DD77">${arg}</font> in its name`)
       for (const [key, value] of Object.entries(d.settings.itemlist[d.game.me.serverId])) {
         if (value.name.toLowerCase().includes(arg.toLowerCase())) {
