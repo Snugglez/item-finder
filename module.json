@@ -1,0 +1,18 @@
+{
+	"disableAutoUpdate": false,
+	"name": "item-finder",
+	"author": "Snug",
+	"description": "Keeps track of all your items across characters/bank/petbank command /8 isearch name will post where the item was last seen to toolbox chat",
+	"version": "1",
+	"donationUrl": "https://play.google.com/store/apps/details?id=com.CarvedGames.SD",
+	"options": {
+		"guiName": "item-finder",
+		"niceName": "item-finder",
+		"settingsVersion": 1,
+		"settingsFile": "config.json",
+		"settingsMigrator": "config_generator.js"
+	},
+	"servers": [
+		"https://raw.githubusercontent.com/Snugglez/item-finder/main/"
+	]
+}
